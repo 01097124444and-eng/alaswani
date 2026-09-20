@@ -254,7 +254,7 @@ button.row:active{background:#F6F2EA}
   <button class="nav" data-go="products"><i data-ic="box"></i>المنتجات</button>
   <button class="nav" data-go="settings"><i data-ic="settings"></i>الإعدادات وأرقام الدفع</button>
   <button class="nav" id="installBtn" data-act="install" hidden><i data-ic="down"></i>تثبيت التطبيق</button>
-  <div class="dfoot">نسخة 1.0</div>
+  <div class="dfoot">نسخة 1.1</div>
 </aside>
 
 <!-- النافذة السفلية -->
@@ -1082,17 +1082,18 @@ document.addEventListener('change', e => {
   if (e.target.id === 'impfile') {
     const f = e.target.files[0]; if (!f) return;
     const r = new FileReader();
-    r.onload = () => {
-      try {
-        const d = JSON.parse(r.result);
-        if (!d || typeof d !== 'object' || !('invoices' in d || 'products' in d)) throw 0;
-        if (!confirm('الاستيراد هيبدّل البيانات الحالية بالنسخة اللي في الملف. تكمّل؟')) return;
-        S = merge(d); save(); applyShop(); go('settings'); toast('اتستورد الملف ✓');
-      } catch (err) { toast('الملف ده مش نسخة احتياطية صحيحة'); }
-    };
+    r.onload = () => importText(r.result);
     r.readAsText(f); e.target.value = '';
   }
 });
+function importText(txt) {
+  try {
+    const d = JSON.parse(txt);
+    if (!d || typeof d !== 'object' || !('invoices' in d || 'products' in d)) throw 0;
+    if (!confirm('الاستيراد هيبدّل البيانات الحالية بالنسخة اللي في الملف. تكمّل؟')) return;
+    S = merge(d); save(); applyShop(); go('settings'); toast('اتستورد الملف ✓');
+  } catch (err) { toast('الملف ده مش نسخة احتياطية صحيحة'); }
+}
 document.addEventListener('keydown', e => {
   if (e.key !== 'Enter') return;
   if (e.target.id === 'q') {
@@ -1134,6 +1135,22 @@ go('cashier');
   if (seen) { sp.remove(); return; }
   setTimeout(() => { sp.style.opacity = 0; setTimeout(() => sp.remove(), 380); }, 1100);
 })();
+
+/* الاختصارات والمشاركة وفتح الملفات (من الـ manifest) */
+(function launchParams() {
+  const p = new URLSearchParams(location.search);
+  const g = (p.get('go') || '').replace(/^web\+attara:\/*/i, '').replace(/\/+$/, '').toLowerCase();
+  if (BUILD[g]) go(g);
+  const shared = [p.get('text'), p.get('title'), p.get('url')].filter(Boolean).join(' ').trim();
+  if (shared) { go('cashier'); const q = $('#q'); if (q) { q.value = shared; showResults(shared); toast('استلمت النص من المشاركة'); } }
+  if (p.has('go') || shared) history.replaceState(history.state, '', location.pathname);
+})();
+if ('launchQueue' in window) {
+  launchQueue.setConsumer(async lp => {
+    if (!lp.files || !lp.files.length) return;
+    try { const f = await lp.files[0].getFile(); importText(await f.text()); } catch (e) { toast('مقدرتش أقرا الملف'); }
+  });
+}
 
 if ('serviceWorker' in navigator && /^https?:/.test(location.protocol)) {
   navigator.serviceWorker.register('sw.js').catch(() => {});

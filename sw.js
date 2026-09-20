@@ -1,5 +1,5 @@
 // خدمة التخزين المؤقت: تخلي التطبيق يفتح بسرعة وحتى من غير نت
-const V = 'attara-v1';
+const V = 'attara-v2';
 const CORE = ['./', 'index.html', 'manifest.json', 'shop.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
