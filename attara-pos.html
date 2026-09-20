@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كاشير عصمتيات أسوان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5EFE2; --surface:#FFFFFF; --surface-2:#FBF6EA; --ink:#221B13; --ink-soft:#78695A;
+  --line:#E7DDC8; --gold:#C4881F; --gold-deep:#96660F; --gold-light:#F3D9A1; --paprika:#BD3F26;
+  --olive:#48602F; --olive-deep:#374A24;
+  --shadow-xs:0 1px 2px rgba(34,27,19,.06);
+  --shadow-sm:0 3px 10px rgba(34,27,19,.08);
+  --shadow-md:0 10px 26px -8px rgba(34,27,19,.18);
+  --shadow-lg:0 22px 48px -16px rgba(34,27,19,.28);
+  --r-lg:18px; --r-md:13px; --r-sm:10px;
+  font-family:'Tajawal',sans-serif;
+}
+:root:not([data-theme="light"]) { }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14110C; --surface:#1D1912; --surface-2:#241F16; --ink:#F4EDDD; --ink-soft:#B2A38D;
+    --line:#3A3122; --gold:#E3A83D; --gold-deep:#F0BE5C; --gold-light:#4A3B1C; --paprika:#E4785C;
+    --olive:#8CAE73; --olive-deep:#6E8E58;
+    --shadow-xs:0 1px 2px rgba(0,0,0,.35);
+    --shadow-sm:0 3px 12px rgba(0,0,0,.35);
+    --shadow-md:0 12px 28px -8px rgba(0,0,0,.5);
+    --shadow-lg:0 24px 52px -16px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14110C; --surface:#1D1912; --surface-2:#241F16; --ink:#F4EDDD; --ink-soft:#B2A38D;
+  --line:#3A3122; --gold:#E3A83D; --gold-deep:#F0BE5C; --gold-light:#4A3B1C; --paprika:#E4785C;
+  --olive:#8CAE73; --olive-deep:#6E8E58;
+  --shadow-xs:0 1px 2px rgba(0,0,0,.35);
+  --shadow-sm:0 3px 12px rgba(0,0,0,.35);
+  --shadow-md:0 12px 28px -8px rgba(0,0,0,.5);
+  --shadow-lg:0 24px 52px -16px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+body{margin:0;background:
+  radial-gradient(1100px 500px at 100% -8%, color-mix(in srgb, var(--gold) 10%, transparent), transparent 60%),
+  var(--bg);
+  color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+
+.topbar{
+  position:sticky;top:0;z-index:25;display:flex;align-items:center;gap:14px;
+  padding:16px 18px calc(16px);padding-top:calc(16px + env(safe-area-inset-top,0px));
+  border-bottom:1px solid var(--line);
+  background:color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  box-shadow:0 1px 0 var(--line), 0 8px 20px -14px rgba(34,27,19,.35);
+}
+.hamburger{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;width:42px;height:42px;font-size:18px;color:var(--ink);cursor:pointer;flex:none;box-shadow:var(--shadow-xs);transition:transform .15s,box-shadow .15s,border-color .15s;}
+.hamburger:hover{border-color:var(--gold);box-shadow:var(--shadow-sm);}
+.hamburger:active{transform:scale(.92);}
+.topbar h1{font-size:18px;font-weight:900;margin:0;letter-spacing:.1px;}
+.topbar .sub{font-size:11.5px;font-weight:700;color:var(--gold-deep);background:var(--gold-light);margin-inline-start:auto;padding:5px 10px;border-radius:999px;white-space:nowrap;}
+
+.wrap{max-width:640px;margin:0 auto;padding:18px 16px 40px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;margin-bottom:16px;box-shadow:var(--shadow-sm);}
+.card h2{font-size:15px;font-weight:800;margin:0 0 14px;color:var(--ink);display:flex;align-items:center;gap:8px;padding-bottom:12px;border-bottom:1px solid var(--line);letter-spacing:.1px;}
+
+label{display:block;font-size:12.5px;font-weight:700;color:var(--ink-soft);margin-bottom:6px;letter-spacing:.1px;}
+.field{position:relative;margin-bottom:13px;}
+input{width:100%;padding:12px 13px;border:1.5px solid var(--line);border-radius:var(--r-md);background:var(--surface-2);color:var(--ink);font-family:inherit;font-size:15px;transition:border-color .15s,box-shadow .15s,background .15s;}
+input::placeholder{color:var(--ink-soft);opacity:.65;}
+input:focus{outline:none;border-color:var(--gold);background:var(--surface);box-shadow:0 0 0 4px color-mix(in srgb, var(--gold) 18%, transparent);}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+
+.suggest{position:absolute;top:calc(100% + 4px);right:0;left:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);max-height:220px;overflow-y:auto;z-index:20;display:none;box-shadow:var(--shadow-lg);}
+.suggest.open{display:block;}
+.suggest button{display:flex;justify-content:space-between;width:100%;padding:11px 13px;background:none;border:none;border-bottom:1px solid var(--line);text-align:right;font-family:inherit;font-size:14px;color:var(--ink);cursor:pointer;transition:background .12s;}
+.suggest button:last-child{border-bottom:none;}
+.suggest button:hover{background:var(--gold-light);}
+.suggest .p{color:var(--gold-deep);font-weight:800;}
+.suggest .empty{padding:13px;color:var(--ink-soft);font-size:13px;}
+
+.result{font-size:14.5px;color:var(--ink-soft);margin:2px 0 14px;font-weight:600;}
+.result b{font-size:23px;color:var(--paprika);font-weight:900;}
+
+.btn{width:100%;padding:13px;border:none;border-radius:var(--r-md);font-family:inherit;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:.1px;transition:transform .12s ease, filter .15s ease, box-shadow .15s ease, opacity .15s ease;}
+.btn:hover{filter:brightness(1.04);}
+.btn:active{transform:scale(.97);}
+.btn-gold{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#1C1712;box-shadow:0 8px 18px -6px color-mix(in srgb, var(--gold-deep) 55%, transparent);}
+.btn-olive{background:linear-gradient(180deg,var(--olive),var(--olive-deep));color:#fff;box-shadow:0 8px 18px -6px color-mix(in srgb, var(--olive-deep) 55%, transparent);}
+.btn-outline{background:var(--surface);border:1.5px solid var(--paprika);color:var(--paprika);}
+.btn-outline:hover{background:color-mix(in srgb, var(--paprika) 10%, var(--surface));}
+.btn-ghost{background:var(--surface-2);border:1.5px solid var(--line);color:var(--ink-soft);}
+.btn-ghost:hover{border-color:var(--ink-soft);}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th,td{padding:10px 6px;text-align:center;border-bottom:1px solid var(--line);}
+th{color:var(--ink-soft);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+td.name{text-align:right;font-weight:700;}
+tbody tr{transition:background .12s;}
+tbody tr:hover{background:var(--surface-2);}
+.del-x{background:var(--surface-2);border:1px solid var(--line);width:28px;height:28px;border-radius:9px;color:var(--paprika);font-size:14px;font-weight:900;cursor:pointer;transition:background .12s,border-color .12s;}
+.del-x:hover{background:color-mix(in srgb, var(--paprika) 12%, var(--surface-2));border-color:var(--paprika);}
+.empty-row td{padding:22px 6px;color:var(--ink-soft);}
+.total-bar{display:flex;justify-content:space-between;align-items:center;padding:16px 4px 6px;margin-top:4px;border-top:1.5px dashed var(--line);font-weight:900;font-size:18px;}
+.total-bar span:last-child{color:var(--paprika);font-size:22px;}
+
+/* sidebar */
+.overlay{position:fixed;inset:0;background:rgba(20,16,10,.45);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:29;}
+.overlay.open{opacity:1;pointer-events:auto;}
+.sidebar{position:fixed;top:0;right:-300px;width:284px;height:100%;background:var(--surface);border-left:1px solid var(--line);transition:right .28s cubic-bezier(.4,0,.2,1);z-index:30;padding:18px;box-shadow:var(--shadow-lg);padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));overflow-y:auto;}
+.sidebar.open{right:0;}
+.sidebar h3{font-size:11.5px;font-weight:800;color:var(--ink-soft);margin:20px 4px 8px;text-transform:uppercase;letter-spacing:.5px;}
+.sidebar h3:first-child{margin-top:2px;}
+.nav-item{display:flex;align-items:center;width:100%;text-align:right;padding:12px 12px;background:none;border:none;border-radius:var(--r-sm);font-family:inherit;font-size:14.5px;font-weight:700;color:var(--ink);cursor:pointer;transition:background .15s;margin-bottom:2px;}
+.nav-item.active{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#1C1712;box-shadow:var(--shadow-sm);}
+.nav-item:hover:not(.active){background:var(--surface-2);}
+
+.items-list{max-height:340px;overflow-y:auto;}
+.item-row{display:flex;align-items:center;gap:10px;padding:11px 6px;border-bottom:1px solid var(--line);border-radius:var(--r-sm);transition:background .12s;}
+.item-row:hover{background:var(--surface-2);}
+.item-row .n{flex:1;font-weight:700;}
+.item-row .p{color:var(--gold-deep);font-weight:800;font-size:13.5px;min-width:70px;text-align:left;}
+.item-row button{background:var(--surface-2);border:1px solid var(--line);border-radius:9px;cursor:pointer;font-size:14px;padding:5px 8px;}
+.view{display:none;} .view.active{display:block;}
+
+.pay-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:4px;}
+.pay-btn{padding:11px 6px;border:none;border-radius:9px;background:transparent;color:var(--ink-soft);font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s,color .15s,box-shadow .15s,transform .12s;}
+.pay-btn.active{background:var(--surface);color:var(--olive);box-shadow:var(--shadow-xs);font-weight:800;}
+.pay-btn:active{transform:scale(.96);}
+.import-note{font-size:12.5px;color:var(--ink-soft);margin-top:8px;line-height:1.75;}
+
+#lockScreen{position:fixed;inset:0;background:
+  radial-gradient(900px 420px at 50% -10%, color-mix(in srgb, var(--gold) 14%, transparent), transparent 60%),
+  var(--bg);
+  z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;}
+#lockScreen .card{max-width:300px;width:100%;text-align:center;box-shadow:var(--shadow-lg);}
+#lockScreen h2{text-align:center;border-bottom:none;padding-bottom:0;justify-content:center;font-size:17px;}
+#lockPassInput{text-align:center;letter-spacing:12px;font-size:22px;font-weight:800;}
+
+/* ---- مسح الباركود ---- */
+.inrow{display:flex;gap:8px;align-items:stretch;}
+.inrow input{flex:1;min-width:0;width:auto;}
+.scan-btn{flex:none;width:50px;border:none;border-radius:var(--r-md);background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#1C1712;font-size:20px;cursor:pointer;box-shadow:0 8px 18px -6px color-mix(in srgb, var(--gold-deep) 55%, transparent);transition:transform .12s;}
+.scan-btn:active{transform:scale(.93);}
+.code-tag{display:block;font-size:11px;font-weight:600;color:var(--ink-soft);direction:ltr;text-align:right;margin-top:2px;}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);max-width:88%;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:var(--r-md);font-size:14px;font-weight:700;text-align:center;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:300;box-shadow:var(--shadow-lg);}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+.scan-overlay{position:fixed;inset:0;z-index:200;background:#0d0b08;color:#F3ECDE;display:none;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+.scan-overlay.open{display:flex;}
+.scan-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;font-size:15.5px;font-weight:800;}
+.scan-x{background:none;border:1.5px solid #4a4030;color:#F3ECDE;width:40px;height:40px;border-radius:11px;font-size:17px;cursor:pointer;}
+.scan-stage{position:relative;flex:1;min-height:0;background:#000;overflow:hidden;}
+.scan-stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.scan-frame{position:absolute;top:50%;left:50%;width:82%;max-width:420px;height:34%;max-height:220px;transform:translate(-50%,-50%);border:3px solid #E0A93A;border-radius:16px;box-shadow:0 0 0 9999px rgba(0,0,0,.5);pointer-events:none;}
+.scan-frame i{position:absolute;left:8px;right:8px;top:50%;height:2px;background:#E06848;animation:scanline 1.6s ease-in-out infinite alternate;}
+@keyframes scanline{from{transform:translateY(-34px)}to{transform:translateY(34px)}}
+@media (prefers-reduced-motion:reduce){.scan-frame i{animation:none;}}
+.scan-info{padding:16px 16px calc(16px);background:#1C1712;border-top:1px solid #2c251c;}
+.scan-status{font-size:14.5px;font-weight:700;min-height:24px;line-height:1.65;}
+.scan-status.ok{color:#8FAE79;} .scan-status.warn{color:#F0BE5C;} .scan-status.err{color:#E06848;}
+.scan-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.scan-actions .btn{flex:1;min-width:120px;padding:11px 8px;font-size:13.5px;}
+.scan-foot{display:flex;align-items:center;gap:10px;margin-top:12px;}
+.scan-foot .tot{flex:1;font-weight:900;font-size:15.5px;}
+.scan-foot .btn{width:auto;padding:11px 24px;}
+.torch-btn{display:none;background:none;border:1.5px solid #4a4030;color:#F3ECDE;border-radius:11px;width:44px;height:42px;font-size:18px;cursor:pointer;}
+
+/* ---- عناصر مضافة: عملاء / أرشيف / دفع ---- */
+.hint{font-size:12.5px;color:var(--ink-soft);line-height:1.75;margin-top:2px;margin-bottom:8px;}
+.pay-number-note{font-size:13px;color:var(--olive);font-weight:700;margin-top:8px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:9px 11px;display:none;}
+.pay-number-note.show{display:block;}
+.archive-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:13px 15px;margin-bottom:10px;box-shadow:var(--shadow-xs);}
+.archive-item .ah{display:flex;justify-content:space-between;align-items:center;font-weight:800;margin-bottom:5px;gap:8px;}
+.archive-item .ah .amt{color:var(--paprika);font-weight:900;white-space:nowrap;}
+.archive-item .am{font-size:12px;color:var(--ink-soft);margin-bottom:7px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.archive-item .al{font-size:13px;color:var(--ink-soft);line-height:1.8;}
+.archive-item .af{display:flex;gap:8px;margin-top:10px;}
+.archive-item .af button{flex:1;padding:8px;font-size:12.5px;}
+.badge-pay{display:inline-block;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:2px 9px;font-size:11px;font-weight:700;color:var(--ink-soft);}
+
+</style>
+</head>
+<body>
+
+<div id="lockScreen">
+  <div class="card">
+    <h2>🔒 كاشير عصمتيات أسوان</h2>
+    <div class="field" style="margin-top:10px;">
+      <input type="password" id="lockPassInput" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="••••" autocomplete="off">
+    </div>
+    <button class="btn btn-gold" onclick="checkLockPassword()">دخول</button>
+  </div>
+</div>
+
+<div id="appRoot" style="display:none;">
+
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+<nav class="sidebar" id="sidebar">
+  <h3>القائمة</h3>
+  <button class="nav-item active" id="navMain" onclick="showView('pos')">🧮 الكاشير</button>
+  <button class="nav-item" id="navRes" onclick="showView('resources')">📦 الموارد (الأصناف والأسعار)</button>
+  <button class="nav-item" id="navQtyRes" onclick="showView('qtyres')">🧺 موارد الكميات والقطع</button>
+  <h3>العملاء والعمليات</h3>
+  <button class="nav-item" id="navCustomers" onclick="showView('customers')">📇 دليل العملاء</button>
+  <button class="nav-item" id="navArchive" onclick="showView('archive')">🗂️ سجل العمليات (الأرشيف)</button>
+  <button class="nav-item" id="navPaySettings" onclick="showView('paysettings')">💳 أرقام الدفع (فودافون/إنستاباي)</button>
+</nav>
+
+<div class="topbar">
+  <button class="hamburger" onclick="openSidebar()">☰</button>
+  <h1 id="pageTitle">كاشير عصمتيات أسوان</h1>
+  <span class="sub" id="itemCount"></span>
+</div>
+
+<div class="wrap">
+
+  <!-- شاشة الكاشير -->
+  <section class="view active" id="view-pos">
+    <div class="card">
+      <h2>إضافة صنف للفاتورة</h2>
+      <div class="field">
+        <label>اسم الصنف</label>
+        <div class="inrow">
+          <input type="text" id="searchBox" placeholder="اكتب اسم الصنف... مثلاً: فلفل" autocomplete="off" oninput="onSearch()" onfocus="onSearch()">
+          <button type="button" class="scan-btn" onclick="openScanner('pos')" title="مسح باركود">📷</button>
+        </div>
+        <div class="suggest" id="suggestBox"></div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>سعر الكيلو</label>
+          <input type="number" id="itemPrice" placeholder="مثال: 160" oninput="calcGram()">
+        </div>
+        <div class="field">
+          <label>الوزن (جرام)</label>
+          <input type="number" id="itemGram" placeholder="مثال: 100" oninput="calcGram()">
+        </div>
+      </div>
+      <div class="result">سعر الكمية دي: <b id="calcResult">0</b> جنيه</div>
+      <button class="btn btn-gold" onclick="addToInvoice()">إضافة إلى الفاتورة</button>
+    </div>
+
+    <div class="card">
+      <h2>إضافة صنف بالعدد (قطعة / كيس)</h2>
+      <div class="field">
+        <label>اسم الصنف</label>
+        <div class="inrow">
+          <input type="text" id="qtySearchBox" placeholder="اكتب اسم الصنف... مثلاً: عدس" autocomplete="off" oninput="onQtySearch()" onfocus="onQtySearch()">
+          <button type="button" class="scan-btn" onclick="openScanner('pos')" title="مسح باركود">📷</button>
+        </div>
+        <div class="suggest" id="qtySuggestBox"></div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>سعر القطعة/الكيس</label>
+          <input type="number" id="qtyItemPrice" placeholder="مثال: 45" oninput="calcQty()">
+        </div>
+        <div class="field">
+          <label>العدد</label>
+          <input type="number" id="qtyItemCount" placeholder="مثال: 2" min="1" step="1" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,''); calcQty();">
+        </div>
+      </div>
+      <div class="result">سعر الكمية دي: <b id="qtyCalcResult">0</b> جنيه</div>
+      <button class="btn btn-gold" onclick="addQtyToInvoice()">إضافة إلى الفاتورة</button>
+    </div>
+
+    <div class="card">
+      <h2>فاتورة الزبون</h2>
+      <table>
+        <thead><tr><th>الصنف</th><th>الوزن/العدد</th><th>السعر</th><th></th></tr></thead>
+        <tbody id="invoiceBody">
+          <tr class="empty-row" id="emptyInvoice"><td colspan="4">لسه مفيش أصناف في الفاتورة</td></tr>
+        </tbody>
+      </table>
+      <div class="total-bar"><span>الإجمالي الكلي</span><span id="grandTotal">0 جنيه</span></div>
+
+      <label style="margin-top:6px;">طريقة الدفع</label>
+      <div class="pay-row" id="payRow">
+        <button type="button" class="pay-btn active" data-pay="نقدي" onclick="setPayment('نقدي')">💵 نقدي</button>
+        <button type="button" class="pay-btn" data-pay="فودافون كاش" onclick="setPayment('فودافون كاش')">📱 فودافون كاش</button>
+        <button type="button" class="pay-btn" data-pay="إنستاباي" onclick="setPayment('إنستاباي')">🏦 إنستاباي</button>
+      </div>
+      <div style="font-size:13px;color:var(--ink-soft);margin-top:8px;">طريقة الدفع المختارة: <b id="paymentSelectedText" style="color:var(--olive);">نقدي</b></div>
+      <div class="pay-number-note" id="payNumberNote"></div>
+
+      <div class="field" style="margin-top:14px;">
+        <label>اسم الزبون (اكتب جزء من الاسم أو الرقم يظهرلك بياناته)</label>
+        <input type="text" id="customerSearchBox" placeholder="مثال: محمد" autocomplete="off" oninput="onCustomerSearch()" onfocus="onCustomerSearch()">
+        <div class="suggest" id="customerSuggestBox"></div>
+      </div>
+      <div class="field">
+        <label>رقم واتساب الزبون</label>
+        <input type="tel" id="whatsappPhone" placeholder="مثال: 01012345678" inputmode="tel" autocomplete="off">
+      </div>
+      <button class="btn" style="margin-top:4px;background:#25D366;color:#fff;" onclick="sendInvoiceWhatsapp()">📲 إرسال الفاتورة على واتساب</button>
+
+      <button class="btn btn-outline" style="margin-top:14px;" onclick="clearInvoice()">🆕 زبون جديد</button>
+    </div>
+  </section>
+
+  <!-- شاشة الموارد -->
+  <section class="view" id="view-resources">
+    <div class="card">
+      <h2>إضافة صنف جديد للموارد</h2>
+      <div class="row2">
+        <div class="field">
+          <label>اسم الصنف</label>
+          <input type="text" id="resName" placeholder="مثال: كمون">
+        </div>
+        <div class="field">
+          <label>سعر الكيلو</label>
+          <input type="number" id="resPrice" placeholder="مثال: 160">
+        </div>
+      </div>
+      <div class="field">
+        <label>الباركود (اختياري)</label>
+        <div class="inrow">
+          <input type="text" id="resBarcode" dir="ltr" inputmode="numeric" placeholder="امسحه بالكاميرا أو اكتبه" autocomplete="off">
+          <button type="button" class="scan-btn" onclick="openScanner('register','resBarcode')" title="مسح باركود">📷</button>
+        </div>
+      </div>
+      <button class="btn btn-olive" onclick="saveResourceItem()" id="saveResBtn">حفظ الصنف</button>
+    </div>
+    <div class="card">
+      <h2>استيراد قائمة جاهزة</h2>
+      <p class="import-note">استورد قائمة البهارات وجرادل البهارات (67 صنف) دفعة واحدة، وبعدين حدد سعر كل صنف من القائمة تحت.</p>
+      <button class="btn btn-ghost" onclick="importDefaults()">⬇️ استيراد قائمة البهارات</button>
+    </div>
+    <div class="card">
+      <h2>الأصناف المحفوظة</h2>
+      <div class="items-list" id="itemsList"></div>
+    </div>
+  </section>
+
+  <!-- شاشة موارد الكميات والقطع -->
+  <section class="view" id="view-qtyres">
+    <div class="card">
+      <h2>إضافة صنف جديد لموارد الكميات</h2>
+      <div class="row2">
+        <div class="field">
+          <label>اسم الصنف</label>
+          <input type="text" id="qtyResName" placeholder="مثال: عدس">
+        </div>
+        <div class="field">
+          <label>سعر القطعة/الكيس</label>
+          <input type="number" id="qtyResPrice" placeholder="مثال: 45">
+        </div>
+      </div>
+      <div class="field">
+        <label>الباركود (اختياري)</label>
+        <div class="inrow">
+          <input type="text" id="qtyResBarcode" dir="ltr" inputmode="numeric" placeholder="امسحه بالكاميرا أو اكتبه" autocomplete="off">
+          <button type="button" class="scan-btn" onclick="openScanner('register','qtyResBarcode')" title="مسح باركود">📷</button>
+        </div>
+      </div>
+      <button class="btn btn-olive" onclick="saveQtyResourceItem()" id="saveQtyResBtn">حفظ الصنف</button>
+    </div>
+    <div class="card">
+      <h2>الأصناف المحفوظة</h2>
+      <div class="items-list" id="qtyItemsList"></div>
+    </div>
+  </section>
+
+  <!-- شاشة دليل العملاء -->
+  <section class="view" id="view-customers">
+    <div class="card">
+      <h2>إضافة زبون جديد</h2>
+      <div class="row2">
+        <div class="field">
+          <label>اسم الزبون</label>
+          <input type="text" id="custName" placeholder="مثال: محمد أحمد">
+        </div>
+        <div class="field">
+          <label>رقم الهاتف / واتساب</label>
+          <input type="tel" id="custPhone" dir="ltr" inputmode="tel" placeholder="مثال: 01012345678">
+        </div>
+      </div>
+      <button class="btn btn-olive" onclick="saveCustomer()" id="saveCustBtn">حفظ الزبون</button>
+    </div>
+    <div class="card">
+      <h2>الزباين المحفوظين</h2>
+      <div class="items-list" id="customersList"></div>
+    </div>
+  </section>
+
+  <!-- شاشة سجل العمليات (الأرشيف) -->
+  <section class="view" id="view-archive">
+    <div class="card">
+      <h2>سجل الفواتير المرسلة</h2>
+      <p class="hint">كل فاتورة بتتبعت على واتساب بتتسجل هنا تلقائياً.</p>
+      <div id="archiveList"></div>
+      <button class="btn btn-ghost" style="margin-top:8px;" onclick="clearArchive()">🗑️ مسح كل السجل</button>
+    </div>
+  </section>
+
+  <!-- شاشة أرقام الدفع -->
+  <section class="view" id="view-paysettings">
+    <div class="card">
+      <h2>أرقام التحويل</h2>
+      <p class="hint">الرقم اللي هنا هيظهر للزبون في الفاتورة المرسلة على واتساب لما يختار فودافون كاش أو إنستاباي كطريقة دفع.</p>
+      <div class="field">
+        <label>📱 رقم فودافون كاش</label>
+        <input type="tel" id="vodafoneNumber" dir="ltr" inputmode="tel" placeholder="مثال: 01012345678">
+      </div>
+      <div class="field">
+        <label>🏦 رقم / حساب إنستاباي</label>
+        <input type="text" id="instapayNumber" dir="ltr" placeholder="مثال: 01012345678 أو @username">
+      </div>
+      <button class="btn btn-olive" onclick="savePaySettings()">حفظ الأرقام</button>
+    </div>
+  </section>
+
+</div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="scan-overlay" id="scanOverlay">
+  <div class="scan-head">
+    <span id="scanTitle">مسح الباركود</span>
+    <button type="button" class="scan-x" onclick="stopScanner()" aria-label="إغلاق">✕</button>
+  </div>
+  <div class="scan-stage">
+    <video id="scanVideo" playsinline muted autoplay></video>
+    <input type="file" id="scanFile" accept="image/*" capture="environment" style="display:none" onchange="onScanPhoto(this)">
+    <div class="scan-frame"><i></i></div>
+  </div>
+  <div class="scan-info">
+    <div class="scan-status" id="scanStatus"></div>
+    <div class="scan-actions" id="scanActions"></div>
+    <div class="scan-foot">
+      <span class="tot" id="scanTotal"></span>
+      <button type="button" class="torch-btn" id="torchBtn" onclick="toggleTorch()" aria-label="الفلاش">🔦</button>
+      <button type="button" class="btn btn-gold" onclick="stopScanner()">تم</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ---- قفل الدخول ----
+const LOCK_PASSWORD = '1234';
+const LOCK_SESSION_KEY = 'attara_unlocked';
+function unlockApp(){
+  document.getElementById('lockScreen').style.display = 'none';
+  document.getElementById('appRoot').style.display = 'block';
+  try{ sessionStorage.setItem(LOCK_SESSION_KEY, '1'); }catch(e){}
+}
+function checkLockPassword(){
+  const input = document.getElementById('lockPassInput');
+  if(input.value === LOCK_PASSWORD){
+    unlockApp();
+  } else {
+    input.value = '';
+  }
+}
+(function initLock(){
+  let alreadyUnlocked = false;
+  try{ alreadyUnlocked = sessionStorage.getItem(LOCK_SESSION_KEY) === '1'; }catch(e){}
+  if(alreadyUnlocked){ unlockApp(); }
+})();
+document.getElementById('lockPassInput').addEventListener('input', function(){
+  if(this.value.length >= 4){ checkLockPassword(); }
+});
+document.getElementById('lockPassInput').addEventListener('keydown', function(e){
+  if(e.key === 'Enter'){ checkLockPassword(); }
+});
+
+const STORE_KEY = 'attara_items_v1';
+let items = [];
+let editingId = null;
+let linkedItemName = null;
+let invoice = [];
+let selectedPayment = 'نقدي';
+
+// قائمة البهارات وجرادل البهارات الجاهزة للاستيراد
+const spicesAndBucketsData = {
+  "items": [
+    { "name": "فلفل برازيلي" }, { "name": "فلفل ناعم" }, { "name": "كمون حصى" },
+    { "name": "كمون ناعم" }, { "name": "كزبرة بلدي" }, { "name": "كزبرة سوري" },
+    { "name": "كزبرة ناعمة" }, { "name": "شطة قرون" }, { "name": "شطة نمرة 1" },
+    { "name": "شطة صحراوي" }, { "name": "ثوم بودر" }, { "name": "بصل بودر" },
+    { "name": "حبهان وسط / أخضر" }, { "name": "حبهان جامبو" }, { "name": "حبهان ناعم" },
+    { "name": "كركم ناعم / حصى" }, { "name": "زعتر سوري" }, { "name": "زعتر عرايش" },
+    { "name": "ورق لوري" }, { "name": "فلفل أبيض" }, { "name": "سماق" },
+    { "name": "قرنفل" }, { "name": "ملح صيني" }, { "name": "كبابة صينية" },
+    { "name": "عصفر بلدي" }, { "name": "عصفر عادة" }, { "name": "عود قرنفل" },
+    { "name": "ليمون ناشف" }, { "name": "قرفة خشب" }, { "name": "قرفة سيجار" },
+    { "name": "جوزة الطيب" }, { "name": "بابريكا" }, { "name": "بهارات لحوم" },
+    { "name": "بهارات عادة" }, { "name": "بهارات فراخ" }, { "name": "بهارات سمك" },
+    { "name": "قرفة ناعمة" }, { "name": "جنزبيل ناعم / حصى" }, { "name": "السبع بهارات" },
+    { "name": "تتبيلة البرجر (جردل 4ك)" }, { "name": "تتبيلة الدجاج (جردل 4ك)" },
+    { "name": "تتبيلة السمك (جردل 4ك)" }, { "name": "تتبيلة الكفتة (جردل 4ك)" },
+    { "name": "تتبيلة اللحوم (جردل 4ك)" }, { "name": "تتبيلة شاورما اللحم (جردل 4ك)" },
+    { "name": "تتبيلة شاورما الدجاج (جردل 4ك)" }, { "name": "تتبيلة الشيش طاووق (جردل 4ك)" },
+    { "name": "تتبيلة الحواوشي (جردل 4ك)" }, { "name": "تتبيلة التكا (جردل 4ك)" },
+    { "name": "تتبيلة السجق الشرقي (جردل 4ك)" }, { "name": "تتبيلة الكبدة (جردل 4ك)" },
+    { "name": "تتبيلة الفاهيتا (جردل 4ك)" }, { "name": "تتبيلة الثوم (جردل 4ك)" },
+    { "name": "تتبيلة الطماطم (جردل 4ك)" }, { "name": "توابل الدواجن (جردل 4ك)" },
+    { "name": "توابل الشواء (جردل 4ك)" }, { "name": "تتبيلة السلطة (جردل 4ك)" },
+    { "name": "دقة الثوم (جردل 4ك)" }, { "name": "صوص الديمي جلاس (جردل 4ك)" },
+    { "name": "صوص الكاري الهندي (جردل 4ك)" }, { "name": "تسبيكة الطماطم (جردل 4ك)" },
+    { "name": "مرقة اللحم (جردل 5ك)" }, { "name": "مرقة الدجاج (جردل 5ك)" },
+    { "name": "مرقة اللحم الضاني (جردل 5ك)" }, { "name": "خلطة الأرز البرياني (جردل 5ك)" },
+    { "name": "خلطة الأرز الزعفران (جردل 5ك)" }, { "name": "خلطة الأرز الكبسة (جردل 5ك)" }
+  ]
+};
+
+function importDefaults(){
+  const existingNames = new Set(items.map(x=>x.name));
+  let added = 0;
+  spicesAndBucketsData.items.forEach(d=>{
+    if(!existingNames.has(d.name)){
+      items.push({ id: 'i'+Date.now()+Math.random().toString(36).slice(2,7), name: d.name, price: 0 });
+      existingNames.add(d.name);
+      added++;
+    }
+  });
+  saveItems();
+  renderItemsList();
+  alert(added > 0 ? ('اتضاف ' + added + ' صنف جديد. دلوقتي حدد سعر كل صنف من القائمة تحت.') : 'كل الأصناف دي متضافة عندك فعلاً.');
+}
+
+// ---- موارد الكميات والقطع (تخزين) ----
+const QTY_STORE_KEY = 'attara_qty_items_v1';
+let qtyItems = [];
+let editingQtyId = null;
+let linkedQtyItemName = null;
+function loadQtyItems(){
+  try{
+    const raw = localStorage.getItem(QTY_STORE_KEY);
+    qtyItems = raw ? JSON.parse(raw) : [];
+  }catch(e){ qtyItems = []; }
+}
+function saveQtyItemsStore(){
+  try{ localStorage.setItem(QTY_STORE_KEY, JSON.stringify(qtyItems)); }catch(e){}
+}
+function saveQtyResourceItem(){
+  const name = document.getElementById('qtyResName').value.trim();
+  const price = parseFloat(document.getElementById('qtyResPrice').value);
+  const barcode = document.getElementById('qtyResBarcode').value.trim();
+  if(!name || !price || price<=0){ alert('اكتب اسم الصنف وسعر القطعة/الكيس بشكل صحيح'); return; }
+  const dup = barcode ? findByBarcode(barcode) : null;
+  if(dup && dup.item.id !== editingQtyId){ alert('الباركود ده متسجل قبل كده على صنف: ' + dup.item.name); return; }
+  if(editingQtyId){
+    const it = qtyItems.find(x=>x.id===editingQtyId);
+    it.name = name; it.price = price; it.barcode = barcode;
+    editingQtyId = null;
+    document.getElementById('saveQtyResBtn').textContent = 'حفظ الصنف';
+  } else {
+    qtyItems.push({ id: 'q'+Date.now(), name, price, barcode });
+  }
+  saveQtyItemsStore();
+  document.getElementById('qtyResName').value='';
+  document.getElementById('qtyResPrice').value='';
+  document.getElementById('qtyResBarcode').value='';
+  renderQtyItemsList();
+}
+function editQtyItem(id){
+  const it = qtyItems.find(x=>x.id===id);
+  if(!it) return;
+  editingQtyId = id;
+  document.getElementById('qtyResName').value = it.name;
+  document.getElementById('qtyResPrice').value = it.price;
+  document.getElementById('qtyResBarcode').value = it.barcode || '';
+  document.getElementById('saveQtyResBtn').textContent = 'تحديث الصنف';
+  document.getElementById('qtyResName').focus();
+}
+function deleteQtyItem(id){
+  if(!confirm('تمسح الصنف ده من موارد الكميات؟')) return;
+  qtyItems = qtyItems.filter(x=>x.id!==id);
+  saveQtyItemsStore();
+  renderQtyItemsList();
+}
+function renderQtyItemsList(){
+  const list = document.getElementById('qtyItemsList');
+  if(qtyItems.length===0){
+    list.innerHTML = '<div class="empty-row" style="text-align:center;color:var(--ink-soft);padding:20px;">لسه مفيش أصناف محفوظة، ضيف أول صنف فوق</div>';
+    return;
+  }
+  list.innerHTML = qtyItems.map(it =>
+    `<div class="item-row">
+      <span class="n">${it.name}${it.barcode ? '<span class="code-tag">🏷️ ' + esc(it.barcode) + '</span>' : ''}</span>
+      <span class="p">${it.price > 0 ? it.price + ' ج/قطعة' : '⚠️ حدد السعر'}</span>
+      <button onclick="editQtyItem('${it.id}')" title="تعديل">✏️</button>
+      <button onclick="deleteQtyItem('${it.id}')" title="حذف">🗑️</button>
+    </div>`
+  ).join('');
+}
+
+// ---- موارد الكميات والقطع: بحث وإضافة للفاتورة ----
+function onQtySearch(){
+  const q = document.getElementById('qtySearchBox').value.trim();
+  const box = document.getElementById('qtySuggestBox');
+  if(linkedQtyItemName !== q) { linkedQtyItemName = null; }
+  if(!q){ box.classList.remove('open'); return; }
+  const matches = qtyItems.filter(it => it.name.startsWith(q));
+  if(matches.length === 0){
+    box.innerHTML = '<div class="empty">مفيش صنف بالاسم ده في موارد الكميات</div>';
+  } else {
+    box.innerHTML = matches.map(it =>
+      `<button type="button" onclick="pickQtyItem('${it.id}')"><span>${it.name}</span><span class="p">${it.price} ج/قطعة</span></button>`
+    ).join('');
+  }
+  box.classList.add('open');
+}
+function pickQtyItem(id){
+  const it = qtyItems.find(x => x.id === id);
+  if(!it) return;
+  document.getElementById('qtySearchBox').value = it.name;
+  document.getElementById('qtyItemPrice').value = it.price;
+  linkedQtyItemName = it.name;
+  document.getElementById('qtySuggestBox').classList.remove('open');
+  calcQty();
+  document.getElementById('qtyItemCount').focus();
+}
+function calcQty(){
+  const price = parseFloat(document.getElementById('qtyItemPrice').value) || 0;
+  let count = parseInt(document.getElementById('qtyItemCount').value, 10);
+  if(isNaN(count) || count < 0) count = 0;
+  const total = price * count;
+  document.getElementById('qtyCalcResult').textContent = total.toFixed(2);
+  return total;
+}
+function addQtyToInvoice(){
+  const name = document.getElementById('qtySearchBox').value.trim();
+  let count = parseInt(document.getElementById('qtyItemCount').value, 10);
+  const price = calcQty();
+  if(!name || !count || count <= 0 || price <= 0){
+    alert('من فضلك املأ اسم الصنف والعدد بشكل صحيح!');
+    return;
+  }
+  invoice.push({ name, label: count + ' قطعة', price });
+  renderInvoice();
+  document.getElementById('qtySearchBox').value = '';
+  document.getElementById('qtyItemPrice').value = '';
+  document.getElementById('qtyItemCount').value = '';
+  document.getElementById('qtyCalcResult').textContent = '0';
+  linkedQtyItemName = null;
+  document.getElementById('qtySearchBox').focus();
+}
+
+// ---- إرسال الفاتورة على واتساب ----
+function normalizeWhatsappPhone(raw){
+  let p = raw.replace(/[^\d+]/g, '');
+  if(p.startsWith('+')) p = p.slice(1);
+  if(p.startsWith('00')) p = p.slice(2);
+  if(p.startsWith('0')) p = '20' + p.slice(1);
+  else if(!p.startsWith('20')) p = '20' + p;
+  return p;
+}
+function buildWhatsappInvoiceText(){
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('ar-EG');
+  const timeStr = now.toLocaleTimeString('ar-EG');
+  let text = '🧾 فاتورة عصمتيات أسوان\n';
+  text += 'التاريخ: ' + dateStr + ' — ' + timeStr + '\n\n';
+  invoice.forEach(r=>{
+    text += '• ' + r.name + ' - ' + r.label + ' - ' + r.price.toFixed(2) + ' ج\n';
+  });
+  const grand = invoice.reduce((s,r)=>s+r.price, 0);
+  text += '\nالإجمالي الكلي: ' + grand.toFixed(2) + ' جنيه';
+  text += '\nطريقة الدفع: ' + selectedPayment;
+  const payNum = getPaymentNumberFor(selectedPayment);
+  if(payNum){
+    text += '\n' + (selectedPayment === 'فودافون كاش' ? 'رقم التحويل (فودافون كاش): ' : 'رقم/حساب التحويل (إنستاباي): ') + payNum;
+  }
+  text += '\n\nشكراً لزيارتكم 🌿';
+  return text;
+}
+function sendInvoiceWhatsapp(){
+  if(invoice.length === 0){ alert('الفاتورة فاضية لسه!'); return; }
+  const phoneInput = document.getElementById('whatsappPhone');
+  const phoneRaw = phoneInput.value.trim();
+  if(!phoneRaw){ alert('من فضلك اكتب رقم واتساب الزبون أولاً'); phoneInput.focus(); return; }
+  const phone = normalizeWhatsappPhone(phoneRaw);
+  const text = buildWhatsappInvoiceText();
+  const url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(text);
+  const nameInput = document.getElementById('customerSearchBox');
+  const custName = nameInput ? nameInput.value.trim() : '';
+  saveArchiveRecord(custName, phoneRaw);
+  upsertCustomer(custName, phoneRaw);
+  window.open(url, '_blank');
+}
+
+function setPayment(p){
+  selectedPayment = p;
+  document.querySelectorAll('.pay-btn').forEach(b=>{
+    b.classList.toggle('active', b.dataset.pay === p);
+  });
+  const noteEl = document.getElementById('paymentSelectedText');
+  if(noteEl) noteEl.textContent = p;
+  updatePayNumberNote();
+}
+function getPaymentNumberFor(p){
+  if(p === 'فودافون كاش') return paySettings.vodafone || '';
+  if(p === 'إنستاباي') return paySettings.instapay || '';
+  return '';
+}
+function updatePayNumberNote(){
+  const el = document.getElementById('payNumberNote');
+  if(!el) return;
+  const num = getPaymentNumberFor(selectedPayment);
+  if(num){
+    el.textContent = (selectedPayment === 'فودافون كاش' ? '📱 حوّل على رقم فودافون كاش: ' : '🏦 حوّل على رقم/حساب إنستاباي: ') + num;
+    el.classList.add('show');
+  } else {
+    el.classList.remove('show');
+  }
+}
+
+// ---- دليل العملاء ----
+const CUSTOMERS_KEY = 'attara_customers_v1';
+let customers = [];
+let editingCustId = null;
+function loadCustomers(){
+  try{
+    const raw = localStorage.getItem(CUSTOMERS_KEY);
+    customers = raw ? JSON.parse(raw) : [];
+  }catch(e){ customers = []; }
+}
+function saveCustomersStore(){
+  try{ localStorage.setItem(CUSTOMERS_KEY, JSON.stringify(customers)); }catch(e){}
+}
+function digitsOnly(s){ return String(s||'').replace(/\D/g,''); }
+function saveCustomer(){
+  const name = document.getElementById('custName').value.trim();
+  const phone = document.getElementById('custPhone').value.trim();
+  if(!name || !phone){ alert('اكتب اسم الزبون ورقمه'); return; }
+  if(editingCustId){
+    const c = customers.find(x=>x.id===editingCustId);
+    c.name = name; c.phone = phone;
+    editingCustId = null;
+    document.getElementById('saveCustBtn').textContent = 'حفظ الزبون';
+  } else {
+    const dup = customers.find(x => digitsOnly(x.phone) === digitsOnly(phone));
+    if(dup){ alert('الرقم ده متسجل قبل كده باسم: ' + dup.name); return; }
+    customers.push({ id: 'c'+Date.now()+Math.random().toString(36).slice(2,6), name, phone });
+  }
+  saveCustomersStore();
+  document.getElementById('custName').value = '';
+  document.getElementById('custPhone').value = '';
+  renderCustomersList();
+}
+function editCustomer(id){
+  const c = customers.find(x=>x.id===id);
+  if(!c) return;
+  editingCustId = id;
+  document.getElementById('custName').value = c.name;
+  document.getElementById('custPhone').value = c.phone;
+  document.getElementById('saveCustBtn').textContent = 'تحديث بيانات الزبون';
+  document.getElementById('custName').focus();
+}
+function deleteCustomer(id){
+  if(!confirm('تمسح الزبون ده من الدليل؟')) return;
+  customers = customers.filter(x=>x.id!==id);
+  saveCustomersStore();
+  renderCustomersList();
+}
+function renderCustomersList(){
+  const list = document.getElementById('customersList');
+  if(customers.length===0){
+    list.innerHTML = '<div class="empty-row" style="text-align:center;color:var(--ink-soft);padding:20px;">لسه مفيش زباين محفوظين</div>';
+    return;
+  }
+  list.innerHTML = customers.slice().reverse().map(c =>
+    `<div class="item-row">
+      <span class="n">${esc(c.name)}<span class="code-tag">📞 ${esc(c.phone)}</span></span>
+      <button onclick="editCustomer('${c.id}')" title="تعديل">✏️</button>
+      <button onclick="deleteCustomer('${c.id}')" title="حذف">🗑️</button>
+    </div>`
+  ).join('');
+}
+// بيضيف الزبون تلقائي لو مش متسجل، أو يحدّث اسمه لو الرقم موجود واسمه فاضي
+function upsertCustomer(name, phone){
+  if(!phone) return;
+  const d = digitsOnly(phone);
+  if(!d) return;
+  const existing = customers.find(x => digitsOnly(x.phone) === d);
+  if(existing){
+    if(name && !existing.name) { existing.name = name; saveCustomersStore(); }
+    return;
+  }
+  customers.push({ id: 'c'+Date.now()+Math.random().toString(36).slice(2,6), name: name || 'زبون بدون اسم', phone });
+  saveCustomersStore();
+}
+// بحث سريع بالاسم أو الرقم في شاشة الكاشير
+function onCustomerSearch(){
+  const q = document.getElementById('customerSearchBox').value.trim();
+  const box = document.getElementById('customerSuggestBox');
+  if(!q){ box.classList.remove('open'); return; }
+  const qDigits = digitsOnly(q);
+  const matches = customers.filter(c =>
+    c.name.includes(q) || (qDigits && digitsOnly(c.phone).includes(qDigits))
+  );
+  if(matches.length === 0){
+    box.innerHTML = '<div class="empty">مفيش زبون بالاسم/الرقم ده في الدليل — هيتسجل تلقائي لما تبعت الفاتورة</div>';
+  } else {
+    box.innerHTML = matches.map(c =>
+      `<button type="button" onclick="pickCustomer('${c.id}')"><span>${esc(c.name)}</span><span class="p">${esc(c.phone)}</span></button>`
+    ).join('');
+  }
+  box.classList.add('open');
+}
+function pickCustomer(id){
+  const c = customers.find(x => x.id === id);
+  if(!c) return;
+  document.getElementById('customerSearchBox').value = c.name;
+  document.getElementById('whatsappPhone').value = c.phone;
+  document.getElementById('customerSuggestBox').classList.remove('open');
+}
+
+// ---- أرقام الدفع (فودافون كاش / إنستاباي) ----
+const PAY_SETTINGS_KEY = 'attara_pay_settings_v1';
+let paySettings = { vodafone:'', instapay:'' };
+function loadPaySettings(){
+  try{
+    const raw = localStorage.getItem(PAY_SETTINGS_KEY);
+    paySettings = raw ? JSON.parse(raw) : { vodafone:'', instapay:'' };
+  }catch(e){ paySettings = { vodafone:'', instapay:'' }; }
+}
+function savePaySettings(){
+  paySettings.vodafone = document.getElementById('vodafoneNumber').value.trim();
+  paySettings.instapay = document.getElementById('instapayNumber').value.trim();
+  try{ localStorage.setItem(PAY_SETTINGS_KEY, JSON.stringify(paySettings)); }catch(e){}
+  updatePayNumberNote();
+  showToast('اتحفظت أرقام الدفع');
+}
+
+// ---- سجل العمليات (الأرشيف) ----
+const ARCHIVE_KEY = 'attara_archive_v1';
+let archive = [];
+function loadArchive(){
+  try{
+    const raw = localStorage.getItem(ARCHIVE_KEY);
+    archive = raw ? JSON.parse(raw) : [];
+  }catch(e){ archive = []; }
+}
+function saveArchiveStore(){
+  try{ localStorage.setItem(ARCHIVE_KEY, JSON.stringify(archive)); }catch(e){}
+}
+function saveArchiveRecord(custName, custPhone){
+  const now = new Date();
+  const grand = invoice.reduce((s,r)=>s+r.price, 0);
+  archive.push({
+    id: 'a'+Date.now()+Math.random().toString(36).slice(2,6),
+    dateStr: now.toLocaleDateString('ar-EG'),
+    timeStr: now.toLocaleTimeString('ar-EG'),
+    ts: now.getTime(),
+    custName: custName || '',
+    custPhone: custPhone || '',
+    items: invoice.map(r => ({ name:r.name, label:r.label, price:r.price })),
+    total: grand,
+    payment: selectedPayment
+  });
+  saveArchiveStore();
+}
+function deleteArchiveRecord(id){
+  if(!confirm('تمسح العملية دي من السجل؟')) return;
+  archive = archive.filter(x=>x.id!==id);
+  saveArchiveStore();
+  renderArchiveList();
+}
+function clearArchive(){
+  if(archive.length===0) return;
+  if(!confirm('تمسح كل سجل العمليات؟ الإجراء ده مش هينفع يتراجع.')) return;
+  archive = [];
+  saveArchiveStore();
+  renderArchiveList();
+}
+function renderArchiveList(){
+  const list = document.getElementById('archiveList');
+  if(archive.length===0){
+    list.innerHTML = '<div class="empty-row" style="text-align:center;color:var(--ink-soft);padding:20px;">لسه مفيش عمليات متسجلة</div>';
+    return;
+  }
+  list.innerHTML = archive.slice().reverse().map(a =>
+    `<div class="archive-item">
+      <div class="ah"><span>${esc(a.custName || 'بدون اسم')}${a.custPhone ? ' — 📞 '+esc(a.custPhone) : ''}</span><span class="amt">${a.total.toFixed(2)} ج</span></div>
+      <div class="am">${esc(a.dateStr)} — ${esc(a.timeStr)} <span class="badge-pay">${esc(a.payment)}</span></div>
+      <div class="al">${a.items.map(it => esc(it.name)+' ('+esc(it.label)+')').join(' • ')}</div>
+      <div class="af"><button class="btn btn-ghost" onclick="deleteArchiveRecord('${a.id}')">🗑️ حذف</button></div>
+    </div>`
+  ).join('');
+}
+
+function loadItems(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    items = raw ? JSON.parse(raw) : [];
+  }catch(e){ items = []; }
+}
+function saveItems(){
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(items)); }catch(e){}
+}
+
+function openSidebar(){ document.getElementById('sidebar').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+function closeSidebar(){ document.getElementById('sidebar').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); }
+
+function showView(v){
+  ['pos','resources','qtyres','customers','archive','paysettings'].forEach(name=>{
+    const sec = document.getElementById('view-'+name);
+    if(sec) sec.classList.toggle('active', v===name);
+  });
+  document.getElementById('navMain').classList.toggle('active', v==='pos');
+  document.getElementById('navRes').classList.toggle('active', v==='resources');
+  document.getElementById('navQtyRes').classList.toggle('active', v==='qtyres');
+  document.getElementById('navCustomers').classList.toggle('active', v==='customers');
+  document.getElementById('navArchive').classList.toggle('active', v==='archive');
+  document.getElementById('navPaySettings').classList.toggle('active', v==='paysettings');
+  const titles = { pos:'كاشير عصمتيات أسوان', resources:'الموارد', qtyres:'موارد الكميات والقطع', customers:'دليل العملاء', archive:'سجل العمليات', paysettings:'أرقام الدفع' };
+  document.getElementById('pageTitle').textContent = titles[v] || 'كاشير عصمتيات أسوان';
+  if(v==='resources') renderItemsList();
+  if(v==='qtyres') renderQtyItemsList();
+  if(v==='customers') renderCustomersList();
+  if(v==='archive') renderArchiveList();
+  if(v==='paysettings'){
+    document.getElementById('vodafoneNumber').value = paySettings.vodafone || '';
+    document.getElementById('instapayNumber').value = paySettings.instapay || '';
+  }
+  closeSidebar();
+}
+
+// ---- بحث ذكي ----
+function onSearch(){
+  const q = document.getElementById('searchBox').value.trim();
+  const box = document.getElementById('suggestBox');
+  if(linkedItemName !== q) { linkedItemName = null; }
+  if(!q){ box.classList.remove('open'); return; }
+  const matches = items.filter(it => it.name.startsWith(q));
+  if(matches.length === 0){
+    box.innerHTML = '<div class="empty">مفيش صنف بالاسم ده في الموارد</div>';
+  } else {
+    box.innerHTML = matches.map(it =>
+      `<button type="button" onclick="pickItem('${it.id}')"><span>${it.name}</span><span class="p">${it.price} ج/كجم</span></button>`
+    ).join('');
+  }
+  box.classList.add('open');
+}
+function pickItem(id){
+  const it = items.find(x => x.id === id);
+  if(!it) return;
+  document.getElementById('searchBox').value = it.name;
+  document.getElementById('itemPrice').value = it.price;
+  linkedItemName = it.name;
+  document.getElementById('suggestBox').classList.remove('open');
+  calcGram();
+  document.getElementById('itemGram').focus();
+}
+document.addEventListener('click', (e)=>{
+  if(!e.target.closest('.field')){
+    document.getElementById('suggestBox').classList.remove('open');
+    const qtyBox = document.getElementById('qtySuggestBox');
+    if(qtyBox) qtyBox.classList.remove('open');
+    const custBox = document.getElementById('customerSuggestBox');
+    if(custBox) custBox.classList.remove('open');
+  }
+});
+
+// ---- حساب واضافة للفاتورة ----
+function calcGram(){
+  const price = parseFloat(document.getElementById('itemPrice').value) || 0;
+  const gram = parseFloat(document.getElementById('itemGram').value) || 0;
+  const total = (price/1000)*gram;
+  document.getElementById('calcResult').textContent = total.toFixed(2);
+  return total;
+}
+function addToInvoice(){
+  const name = document.getElementById('searchBox').value.trim();
+  const gram = document.getElementById('itemGram').value;
+  const price = calcGram();
+  if(!name || !gram || price <= 0){
+    alert('من فضلك املأ اسم الصنف والوزن بشكل صحيح!');
+    return;
+  }
+  invoice.push({ name, label: gram + ' جم', price });
+  renderInvoice();
+  document.getElementById('searchBox').value = '';
+  document.getElementById('itemPrice').value = '';
+  document.getElementById('itemGram').value = '';
+  document.getElementById('calcResult').textContent = '0';
+  linkedItemName = null;
+  document.getElementById('searchBox').focus();
+}
+function renderInvoice(){
+  const body = document.getElementById('invoiceBody');
+  if(invoice.length === 0){
+    body.innerHTML = '<tr class="empty-row" id="emptyInvoice"><td colspan="4">لسه مفيش أصناف في الفاتورة</td></tr>';
+  } else {
+    body.innerHTML = invoice.map((row, i) =>
+      `<tr><td class="name">${row.name}</td><td>${row.label}</td><td>${row.price.toFixed(2)}</td>
+       <td><button class="del-x" onclick="removeRow(${i})">✕</button></td></tr>`
+    ).join('');
+  }
+  const grand = invoice.reduce((s,r)=>s+r.price, 0);
+  document.getElementById('grandTotal').textContent = grand.toFixed(2) + ' جنيه';
+}
+function removeRow(i){ invoice.splice(i,1); renderInvoice(); }
+function clearInvoice(){ invoice = []; renderInvoice(); }
+
+// ---- الموارد ----
+function saveResourceItem(){
+  const name = document.getElementById('resName').value.trim();
+  const price = parseFloat(document.getElementById('resPrice').value);
+  const barcode = document.getElementById('resBarcode').value.trim();
+  if(!name || !price || price<=0){ alert('اكتب اسم الصنف وسعر الكيلو بشكل صحيح'); return; }
+  const dup = barcode ? findByBarcode(barcode) : null;
+  if(dup && dup.item.id !== editingId){ alert('الباركود ده متسجل قبل كده على صنف: ' + dup.item.name); return; }
+  if(editingId){
+    const it = items.find(x=>x.id===editingId);
+    it.name = name; it.price = price; it.barcode = barcode;
+    editingId = null;
+    document.getElementById('saveResBtn').textContent = 'حفظ الصنف';
+  } else {
+    items.push({ id: 'i'+Date.now(), name, price, barcode });
+  }
+  saveItems();
+  document.getElementById('resName').value='';
+  document.getElementById('resPrice').value='';
+  document.getElementById('resBarcode').value='';
+  renderItemsList();
+}
+function editItem(id){
+  const it = items.find(x=>x.id===id);
+  if(!it) return;
+  editingId = id;
+  document.getElementById('resName').value = it.name;
+  document.getElementById('resPrice').value = it.price;
+  document.getElementById('resBarcode').value = it.barcode || '';
+  document.getElementById('saveResBtn').textContent = 'تحديث الصنف';
+  document.getElementById('resName').focus();
+}
+function deleteItem(id){
+  if(!confirm('تمسح الصنف ده من الموارد؟')) return;
+  items = items.filter(x=>x.id!==id);
+  saveItems();
+  renderItemsList();
+}
+function renderItemsList(){
+  const list = document.getElementById('itemsList');
+  document.getElementById('itemCount').textContent = items.length ? (items.length + ' صنف محفوظ') : '';
+  if(items.length===0){
+    list.innerHTML = '<div class="empty-row" style="text-align:center;color:var(--ink-soft);padding:20px;">لسه مفيش أصناف محفوظة، ضيف أول صنف فوق</div>';
+    return;
+  }
+  list.innerHTML = items.map(it =>
+    `<div class="item-row">
+      <span class="n">${it.name}${it.barcode ? '<span class="code-tag">🏷️ ' + esc(it.barcode) + '</span>' : ''}</span>
+      <span class="p">${it.price > 0 ? it.price + ' ج/كجم' : '⚠️ حدد السعر'}</span>
+      <button onclick="editItem('${it.id}')" title="تعديل">✏️</button>
+      <button onclick="deleteItem('${it.id}')" title="حذف">🗑️</button>
+    </div>`
+  ).join('');
+}
+
+// =====================================================
+//  مسح الباركود بالكاميرا (متصفح + تطبيق أندرويد)
+//  1) بنفتح الكاميرا بنفسنا من ضغطة الزرار
+//  2) القراءة: قارئ المتصفح المدمج لو موجود، وإلا مكتبة ZXing
+//  3) لو الكاميرا اتمنعت: بنقولك السبب بالظبط + زرار "صوّر بكاميرا الموبايل" بيشتغل في كل الحالات
+// =====================================================
+const ZXING_SOURCES = [
+  'zxing.min.js', // نسخة محلية (هنحطها جنب الملف لما نعمل التطبيق عشان يشتغل من غير نت)
+  'https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js'
+];
+const SCAN_COOLDOWN_MS = 1500;
+const SC = {
+  open:false, mode:'pos', inputId:null, selfId:null, session:0,
+  stream:null, timer:null, fallback:false, needReload:false, permStatus:null,
+  paused:false, lastCode:'', lastAt:0, pendingCode:'', track:null, torchOn:false
+};
+let audioCtx = null;
+let toastTimer = null;
+let nativeDetectorP = null;
+let zxLoading = null;
+let zxMulti = null;
+
+function esc(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+// نقارن الباركود من غير مسافات ولا أصفار في الأول (عشان UPC و EAN يتطابقوا)
+function normCode(s){
+  return String(s || '').trim().replace(/\s+/g,'').replace(/^0+(?=\d)/,'');
+}
+function findByBarcode(code){
+  const n = normCode(code);
+  if(!n) return null;
+  let it = qtyItems.find(x => x.barcode && normCode(x.barcode) === n);
+  if(it) return { kind:'qty', item:it };
+  it = items.find(x => x.barcode && normCode(x.barcode) === n);
+  if(it) return { kind:'weight', item:it };
+  return null;
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
+}
+function beep(ok){
+  try{
+    if(audioCtx){
+      const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+      o.frequency.value = ok ? 1100 : 300;
+      g.gain.value = 0.08;
+      o.connect(g); g.connect(audioCtx.destination);
+      o.start(); o.stop(audioCtx.currentTime + (ok ? 0.12 : 0.25));
+    }
+  }catch(e){}
+  try{ if(navigator.vibrate) navigator.vibrate(ok ? 60 : [80,60,80]); }catch(e){}
+}
+function setScanStatus(msg, kind){
+  const el = document.getElementById('scanStatus');
+  el.textContent = msg;
+  el.className = 'scan-status ' + (kind || '');
+}
+function setScanActions(html){ document.getElementById('scanActions').innerHTML = html || ''; }
+function updateScanTotal(){
+  const el = document.getElementById('scanTotal');
+  if(SC.mode === 'pos'){
+    const g = invoice.reduce((s,r) => s + r.price, 0);
+    el.textContent = 'الإجمالي: ' + g.toFixed(2) + ' جنيه';
+  } else { el.textContent = ''; }
+}
+
+// ---- قارئ المتصفح المدمج / مكتبة ZXing ----
+function makeNativeDetector(){
+  if(nativeDetectorP) return nativeDetectorP;
+  nativeDetectorP = (async () => {
+    try{
+      if(!('BarcodeDetector' in window)) return null;
+      let formats = ['ean_13','ean_8','upc_a','upc_e','code_128','code_39','itf','qr_code'];
+      if(typeof BarcodeDetector.getSupportedFormats === 'function'){
+        const sup = await BarcodeDetector.getSupportedFormats();
+        formats = formats.filter(f => sup.includes(f));
+      }
+      return formats.length ? new BarcodeDetector({ formats }) : null;
+    }catch(e){ return null; }
+  })();
+  return nativeDetectorP;
+}
+function loadScript(src){
+  return new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = () => resolve();
+    s.onerror = () => reject(new Error('load'));
+    document.head.appendChild(s);
+  });
+}
+function zxIsReady(){ return !!(window.ZXing && window.ZXing.MultiFormatReader); }
+function loadZxing(){
+  if(zxIsReady()) return Promise.resolve();
+  if(zxLoading) return zxLoading;
+  zxLoading = (async () => {
+    for(const src of ZXING_SOURCES){
+      try{ await loadScript(src); if(zxIsReady()) return; }catch(e){}
+    }
+    zxLoading = null;
+    throw new Error('zxing-load');
+  })();
+  return zxLoading;
+}
+function zxDecodeCanvas(cv){
+  const Z = window.ZXing;
+  if(!zxMulti){
+    const hints = new Map();
+    hints.set(Z.DecodeHintType.POSSIBLE_FORMATS, [
+      Z.BarcodeFormat.EAN_13, Z.BarcodeFormat.EAN_8, Z.BarcodeFormat.UPC_A, Z.BarcodeFormat.UPC_E,
+      Z.BarcodeFormat.CODE_128, Z.BarcodeFormat.CODE_39, Z.BarcodeFormat.ITF, Z.BarcodeFormat.QR_CODE
+    ]);
+    hints.set(Z.DecodeHintType.TRY_HARDER, true);
+    zxMulti = new Z.MultiFormatReader();
+    zxMulti.setHints(hints);
+  }
+  try{
+    const bmp = new Z.BinaryBitmap(new Z.HybridBinarizer(new Z.HTMLCanvasElementLuminanceSource(cv)));
+    return zxMulti.decode(bmp).getText();
+  }catch(e){ return null; } // مفيش باركود في الصورة دي
+}
+
+// ---- الكاميرا ----
+async function getStream(){
+  const md = navigator.mediaDevices;
+  try{
+    return await md.getUserMedia({ audio:false, video:{ facingMode:{ ideal:'environment' }, width:{ ideal:1280 }, height:{ ideal:720 } } });
+  }catch(e){
+    if(e && (e.name === 'OverconstrainedError' || e.name === 'ConstraintNotSatisfiedError' || e.name === 'TypeError')){
+      return await md.getUserMedia({ audio:false, video:true });
+    }
+    throw e;
+  }
+}
+function isNativeApp(){
+  try{ return !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()); }catch(e){ return false; }
+}
+function isFramed(){
+  try{ return window.self !== window.top; }catch(e){ return true; }
+}
+function isLocalFile(){
+  try{ return location.protocol === 'file:' || location.protocol === 'content:'; }catch(e){ return false; }
+}
+function cameraPolicyBlocked(){
+  try{
+    const pp = document.permissionsPolicy || document.featurePolicy;
+    return !!(pp && pp.allowsFeature && !pp.allowsFeature('camera'));
+  }catch(e){ return false; }
+}
+// بيسأل المتصفح: الكاميرا مسموحة (granted) ولا هيسأل (prompt) ولا مرفوضة (denied). null = المتصفح مبيقولش
+async function getCameraState(){
+  try{
+    if(!(navigator.permissions && navigator.permissions.query)) return null;
+    const st = await navigator.permissions.query({ name:'camera' });
+    if(SC.permStatus) SC.permStatus.onchange = null;
+    SC.permStatus = st;
+    // لو غيّرت الإذن من الإعدادات والصفحة لسه مفتوحة، الكاميرا تكمّل لوحدها
+    st.onchange = () => { if(SC.open && SC.fallback && st.state !== 'denied') retryCamera(); };
+    return st.state;
+  }catch(e){ return null; }
+}
+// بيفهم ليه الكاميرا مفتحتش وبيرجع رسالة واضحة
+async function explainCameraError(err){
+  const n = err && err.name;
+  if(err && err.message === 'zxing-load') return 'مقدرتش أحمّل قارئ الباركود. اتأكد من النت وجرّب تاني، أو صوّر الباركود بكاميرا الموبايل.';
+  if(n === 'NotAllowedError' || n === 'SecurityError' || n === 'PermissionDeniedError'){
+    if(isLocalFile() && !isNativeApp()){
+      return 'الصفحة مفتوحة كملف من الموبايل، والمتصفح بيمنع الكاميرا كده من غير ما يسألك. لازم تفتحها من رابط https (ملف attara-site.zip على netlify)، أو صوّر الباركود بكاميرا الموبايل.';
+    }
+    const policyBlocked = cameraPolicyBlocked();
+    let state = null;
+    try{
+      if(navigator.permissions && navigator.permissions.query){
+        state = (await navigator.permissions.query({ name:'camera' })).state;
+      }
+    }catch(e){}
+    if(policyBlocked || (isFramed() && state !== 'denied')){
+      return 'الصفحة شغالة جوه إطار (زي معاينة كلود) والإطار ده بيمنع الكاميرا. افتح الصفحة من رابطها المباشر في المتصفح أو من التطبيق، أو صوّر الباركود بكاميرا الموبايل.';
+    }
+    if(isNativeApp()) return 'التطبيق مش واخد إذن الكاميرا. من إعدادات الموبايل ← التطبيقات ← الكاشير ← الأذونات ← الكاميرا ← سماح.';
+    if(state === 'denied') return 'الكاميرا متقفولة للموقع ده. دوس على القفل 🔒 جنب الرابط ← الأذونات ← الكاميرا ← سماح، وبعدين "جرّب تاني".';
+    return 'المتصفح منعك من الكاميرا. دوس "سماح" لما يسألك، ولو مسألش فعّل الكاميرا من إعدادات الموقع.';
+  }
+  if(n === 'NotFoundError' || n === 'DevicesNotFoundError') return 'مفيش كاميرا متاحة على الجهاز ده.';
+  if(n === 'NotReadableError' || n === 'TrackStartError') return 'الكاميرا مشغولة في برنامج تاني. اقفله وجرّب تاني.';
+  return 'حصلت مشكلة في فتح الكاميرا. جرّب تاني أو صوّر الباركود بكاميرا الموبايل.';
+}
+const CAM_FLAG = 'attara_cam_ok';
+
+function showFallbackActions(){
+  setScanActions(
+    '<button type="button" class="btn btn-gold" onclick="openPhotoPicker()">📸 صوّر الباركود بكاميرا الموبايل</button>' +
+    '<button type="button" class="btn btn-ghost" onclick="retryCamera()">🔄 جرّب الكاميرا تاني</button>' +
+    (SC.needReload ? '<button type="button" class="btn btn-ghost" onclick="location.reload()">🔃 حدّث الصفحة</button>' : '')
+  );
+}
+async function showCameraProblem(err, mySession){
+  const text = await explainCameraError(err);
+  if(mySession !== SC.session || !SC.open) return;
+  releaseStream();
+  const n = err && err.name;
+  const denied = (n === 'NotAllowedError' || n === 'SecurityError' || n === 'PermissionDeniedError');
+  if(denied){ try{ localStorage.removeItem(CAM_FLAG); }catch(e){} }
+  SC.needReload = denied && !isFramed() && !isLocalFile();
+  SC.fallback = true;
+  setScanStatus(text, 'err');
+  showFallbackActions();
+}
+function retryCamera(){
+  const m = SC.mode, id = SC.inputId;
+  stopScanner();
+  openScanner(m, id);
+}
+function openPhotoPicker(){ document.getElementById('scanFile').click(); }
+
+function releaseStream(){
+  if(SC.timer){ clearInterval(SC.timer); SC.timer = null; }
+  const v = document.getElementById('scanVideo');
+  const s = SC.stream || v.srcObject;
+  try{ if(s && s.getTracks) s.getTracks().forEach(t => t.stop()); }catch(e){}
+  v.srcObject = null;
+  SC.stream = null; SC.track = null; SC.torchOn = false;
+  document.getElementById('torchBtn').style.display = 'none';
+}
+
+// أول مرة: رسالة بتشرح للمستخدم ليه الكاميرا، وزرار بيطلّع سؤال السماح بتاع المتصفح
+function showPermissionIntro(){
+  setScanStatus('عشان نمسح الباركود لازم تسمح للكاميرا. دوس الزرار تحت، وهيظهر سؤال من المتصفح — دوس "سماح". مرة واحدة بس.', '');
+  setScanActions(
+    '<button type="button" class="btn btn-gold" onclick="startCamera()">📷 تفعيل الكاميرا</button>' +
+    '<button type="button" class="btn btn-ghost" onclick="openPhotoPicker()">📸 أو صوّر بكاميرا الموبايل</button>'
+  );
+}
+
+async function openScanner(mode, inputId){
+  if(SC.open) return;
+  SC.open = true;
+  SC.mode = mode || 'pos';
+  SC.inputId = inputId || null;
+  SC.selfId = inputId === 'qtyResBarcode' ? editingQtyId : (inputId === 'resBarcode' ? editingId : null);
+  SC.paused = false; SC.fallback = false; SC.needReload = false; SC.lastCode = ''; SC.lastAt = 0; SC.pendingCode = '';
+  const mySession = ++SC.session;
+
+  try{
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+  }catch(e){}
+
+  document.getElementById('scanTitle').textContent = SC.mode === 'pos' ? '📷 مسح باركود للبيع' : '📷 مسح باركود لتسجيله';
+  document.getElementById('torchBtn').style.display = 'none';
+  setScanActions('');
+  updateScanTotal();
+  document.getElementById('scanOverlay').classList.add('open');
+  setScanStatus('لحظة...', '');
+
+  if(!window.isSecureContext){
+    SC.fallback = true;
+    setScanStatus('الكاميرا المباشرة مش هتشتغل من ملف مفتوح على الموبايل. افتح الصفحة من رابط https، أو صوّر الباركود بكاميرا الموبايل.', 'err');
+    showFallbackActions();
+    return;
+  }
+  if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+    SC.fallback = true;
+    setScanStatus('المتصفح ده مش بيدعم الكاميرا المباشرة. صوّر الباركود بكاميرا الموبايل.', 'err');
+    showFallbackActions();
+    return;
+  }
+
+  // لو الإطار نفسه ممنوع من الكاميرا، مفيش داعي نسأل
+  if(cameraPolicyBlocked()){
+    await showCameraProblem({ name:'NotAllowedError' }, mySession);
+    return;
+  }
+  const state = await getCameraState();
+  if(mySession !== SC.session) return;
+  if(state === 'denied'){
+    await showCameraProblem({ name:'NotAllowedError' }, mySession);
+    return;
+  }
+  let known = state === 'granted';
+  if(!known){ try{ known = localStorage.getItem(CAM_FLAG) === '1'; }catch(e){} }
+  if(!known && !isNativeApp()){ showPermissionIntro(); return; }
+  await startCamera();
+}
+
+async function startCamera(){
+  if(!SC.open) return;
+  const mySession = SC.session;
+  setScanActions('');
+  setScanStatus('بفتح الكاميرا... لو ظهر سؤال دوس "سماح"', '');
+  try{
+    // بنطلب الكاميرا (ده اللي بيطلّع سؤال السماح)
+    const stream = await getStream();
+    if(mySession !== SC.session){ stream.getTracks().forEach(t => t.stop()); return; }
+    try{ localStorage.setItem(CAM_FLAG, '1'); }catch(e){}
+    const v = document.getElementById('scanVideo');
+    v.muted = true; v.setAttribute('playsinline', ''); v.setAttribute('autoplay', '');
+    SC.stream = stream;
+    v.srcObject = stream;
+    try{ await v.play(); }catch(e){}
+    SC.track = stream.getVideoTracks()[0];
+    setupTrack();
+
+    // بعدين نختار القارئ
+    const native = await makeNativeDetector();
+    if(mySession !== SC.session) return;
+    if(!native){
+      setScanStatus('بحمّل قارئ الباركود...', '');
+      await loadZxing();
+      if(mySession !== SC.session) return;
+    }
+    setScanStatus('وجّه الكاميرا على الباركود', '');
+
+    let useNative = !!native, nativeErrors = 0, busy = false;
+    const cv = document.createElement('canvas');
+    const ctx = cv.getContext('2d', { willReadFrequently:true });
+    SC.timer = setInterval(async () => {
+      if(busy || SC.paused || v.readyState < 2 || !v.videoWidth) return;
+      busy = true;
+      try{
+        let text = null;
+        if(useNative){
+          try{
+            const r = await native.detect(v);
+            if(r && r.length) text = r[0].rawValue;
+            nativeErrors = 0;
+          }catch(e){
+            if(++nativeErrors >= 8){ useNative = false; loadZxing().catch(() => {}); }
+          }
+        } else if(zxIsReady()){
+          const scale = Math.min(1, 960 / v.videoWidth);
+          cv.width = Math.max(1, Math.round(v.videoWidth * scale));
+          cv.height = Math.max(1, Math.round(v.videoHeight * scale));
+          ctx.drawImage(v, 0, 0, cv.width, cv.height);
+          text = zxDecodeCanvas(cv);
+        }
+        if(text) handleDetected(text);
+      }finally{ busy = false; }
+    }, 150);
+  }catch(err){
+    if(mySession !== SC.session) return;
+    await showCameraProblem(err, mySession);
+  }
+}
+
+function setupTrack(){
+  const t = SC.track;
+  if(!t) return;
+  try{
+    const caps = t.getCapabilities ? t.getCapabilities() : {};
+    if(caps.focusMode && caps.focusMode.includes('continuous')){
+      t.applyConstraints({ advanced:[{ focusMode:'continuous' }] }).catch(() => {});
+    }
+    if(caps.torch) document.getElementById('torchBtn').style.display = 'inline-block';
+  }catch(e){}
+}
+function toggleTorch(){
+  const t = SC.track;
+  if(!t) return;
+  SC.torchOn = !SC.torchOn;
+  t.applyConstraints({ advanced:[{ torch:SC.torchOn }] }).catch(() => { SC.torchOn = false; });
+}
+
+function stopScanner(){
+  SC.session++;
+  SC.open = false;
+  SC.paused = false;
+  SC.fallback = false;
+  releaseStream();
+  document.getElementById('scanOverlay').classList.remove('open');
+}
+document.addEventListener('visibilitychange', () => { if(document.hidden && SC.open && !SC.fallback) stopScanner(); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape' && SC.open) stopScanner(); });
+
+// ---- تصوير الباركود بكاميرا الموبايل العادية (بيشتغل حتى لو الكاميرا المباشرة ممنوعة) ----
+function loadImageFromFile(file){
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => resolve({ img, url });
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('img')); };
+    img.src = url;
+  });
+}
+async function decodePhoto(file){
+  const { img, url } = await loadImageFromFile(file);
+  try{
+    const native = await makeNativeDetector();
+    for(const maxSide of [1600, 1000]){
+      const w = img.naturalWidth || img.width, h = img.naturalHeight || img.height;
+      const scale = Math.min(1, maxSide / Math.max(w, h));
+      const cv = document.createElement('canvas');
+      cv.width = Math.max(1, Math.round(w * scale));
+      cv.height = Math.max(1, Math.round(h * scale));
+      cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+      let text = null;
+      if(native){
+        try{ const r = await native.detect(cv); if(r && r.length) text = r[0].rawValue; }catch(e){}
+      }
+      if(!text){
+        try{ await loadZxing(); text = zxDecodeCanvas(cv); }catch(e){}
+      }
+      if(text) return text;
+    }
+    return null;
+  } finally { URL.revokeObjectURL(url); }
+}
+async function onScanPhoto(input){
+  const file = input.files && input.files[0];
+  input.value = '';
+  if(!file || !SC.open) return;
+  const mySession = SC.session;
+  setScanStatus('بقرا الباركود من الصورة...', '');
+  let code = null;
+  try{ code = await decodePhoto(file); }catch(e){ code = null; }
+  if(mySession !== SC.session || !SC.open) return;
+  if(!code){
+    setScanStatus('مقدرتش أقرأ الباركود من الصورة. قرّب أكتر وصوّر تاني في إضاءة كويسة.', 'warn');
+    return;
+  }
+  SC.lastCode = '';
+  handleDetected(code);
+}
+
+// ---- لما الكاميرا تلقط باركود ----
+function handleDetected(raw){
+  if(!SC.open || SC.paused) return;
+  const code = String(raw || '').trim();
+  if(!code) return;
+  const now = Date.now();
+  const same = code === SC.lastCode && (now - SC.lastAt) < SCAN_COOLDOWN_MS;
+  SC.lastCode = code; SC.lastAt = now;
+  if(same) return; // نفس الباركود لسه قدام الكاميرا، متضيفوش تاني
+  if(SC.mode === 'pos') handlePosCode(code); else handleRegisterCode(code);
+}
+
+// بيدور على الباركود وبيعمل اللازم في شاشة الكاشير (بيرجع نتيجة بس)
+function applyPosScan(code){
+  const found = findByBarcode(code);
+  if(!found) return { type:'unknown' };
+  const it = found.item;
+  if(found.kind === 'qty'){
+    if(!(it.price > 0)) return { type:'noprice', item:it };
+    let row = invoice.find(r => r.src === it.id);
+    if(row){
+      row.qty += 1; row.price = it.price * row.qty; row.label = row.qty + ' قطعة';
+    } else {
+      row = { name: it.name, label: '1 قطعة', price: it.price, qty: 1, src: it.id };
+      invoice.push(row);
+    }
+    renderInvoice();
+    return { type:'qty', item:it, row };
+  }
+  // صنف بالكيلو: نكتب الاسم والسعر وننتظر الوزن
+  document.getElementById('searchBox').value = it.name;
+  document.getElementById('itemPrice').value = it.price > 0 ? it.price : '';
+  linkedItemName = it.name;
+  document.getElementById('suggestBox').classList.remove('open');
+  calcGram();
+  return { type: it.price > 0 ? 'weight' : 'noprice', item:it };
+}
+
+function handlePosCode(code){
+  const r = applyPosScan(code);
+  if(r.type === 'unknown'){
+    beep(false);
+    SC.paused = true;
+    SC.pendingCode = code;
+    setScanStatus('باركود جديد: ' + code + ' — مش متسجل عندك', 'warn');
+    setScanActions(
+      '<button type="button" class="btn btn-gold" onclick="registerScanned(\'qty\')">📦 سجّله بالقطعة</button>' +
+      '<button type="button" class="btn btn-gold" onclick="registerScanned(\'weight\')">⚖️ سجّله بالكيلو</button>' +
+      '<button type="button" class="btn btn-ghost" onclick="resumeScan()">كمّل مسح</button>'
+    );
+    return;
+  }
+  if(r.type === 'qty'){
+    beep(true);
+    setScanStatus('✅ ' + r.item.name + ' — ' + r.row.qty + ' قطعة — ' + r.row.price.toFixed(2) + ' جنيه', 'ok');
+    updateScanTotal();
+    return;
+  }
+  if(r.type === 'noprice'){
+    beep(false);
+    if(r.item.id.charAt(0) === 'i'){
+      stopScanner();
+      showToast('اتكتب "' + r.item.name + '" — سعره لسه مش محدد، اكتب السعر والوزن');
+      document.getElementById('itemPrice').focus();
+    } else {
+      setScanStatus('⚠️ "' + r.item.name + '" سعره لسه مش محدد', 'warn');
+    }
+    return;
+  }
+  // r.type === 'weight'
+  beep(true);
+  stopScanner();
+  showToast('✅ ' + r.item.name + ' — ' + r.item.price + ' ج/كجم — اكتب الوزن بالجرام');
+  document.getElementById('itemGram').focus();
+}
+
+function resumeScan(){
+  SC.paused = false;
+  SC.lastAt = Date.now();
+  if(SC.fallback){
+    setScanStatus('صوّر الباركود اللي بعده', '');
+    showFallbackActions();
+  } else {
+    setScanActions('');
+    setScanStatus('وجّه الكاميرا على الباركود', '');
+  }
+}
+// تسجيل باركود جديد اتلقط من شاشة الكاشير
+function registerScanned(kind){
+  const code = SC.pendingCode;
+  stopScanner();
+  editingQtyId = null; editingId = null;
+  document.getElementById('saveQtyResBtn').textContent = 'حفظ الصنف';
+  document.getElementById('saveResBtn').textContent = 'حفظ الصنف';
+  const isQty = kind === 'qty';
+  showView(isQty ? 'qtyres' : 'resources');
+  document.getElementById(isQty ? 'qtyResName' : 'resName').value = '';
+  document.getElementById(isQty ? 'qtyResPrice' : 'resPrice').value = '';
+  document.getElementById(isQty ? 'qtyResBarcode' : 'resBarcode').value = code;
+  document.getElementById(isQty ? 'qtyResName' : 'resName').focus();
+  showToast('اكتب اسم الصنف وسعره واضغط حفظ');
+}
+
+// ---- لما بنمسح الباركود عشان نسجله في صنف ----
+function handleRegisterCode(code){
+  const dup = findByBarcode(code);
+  if(dup && dup.item.id !== SC.selfId){
+    beep(false);
+    setScanStatus('⚠️ الباركود ده متسجل قبل كده على: ' + dup.item.name, 'warn');
+    return;
+  }
+  const inp = document.getElementById(SC.inputId);
+  if(inp) inp.value = code;
+  beep(true);
+  stopScanner();
+  showToast('اتسجل الباركود: ' + code);
+}
+
+// ---- لو عندك جهاز قارئ باركود (USB أو بلوتوث): بيكتب الرقم ويدوس Enter ----
+['searchBox','qtySearchBox'].forEach(id => {
+  const box = document.getElementById(id);
+  if(!box) return;
+  box.addEventListener('keydown', (e) => {
+    if(e.key !== 'Enter') return;
+    const v = box.value.trim();
+    if(!/^\d{6,}$/.test(v)) return;
+    e.preventDefault();
+    box.value = '';
+    document.getElementById('suggestBox').classList.remove('open');
+    document.getElementById('qtySuggestBox').classList.remove('open');
+    const r = applyPosScan(v);
+    if(r.type === 'unknown') showToast('باركود مش متسجل: ' + v);
+    else if(r.type === 'qty') showToast('✅ ' + r.item.name + ' — ' + r.row.qty + ' قطعة — ' + r.row.price.toFixed(2) + ' جنيه');
+    else if(r.type === 'weight') { showToast('✅ ' + r.item.name + ' — اكتب الوزن بالجرام'); document.getElementById('itemGram').focus(); }
+    else showToast('"' + r.item.name + '" سعره لسه مش محدد');
+  });
+});
+
+loadItems();
+loadQtyItems();
+loadCustomers();
+loadPaySettings();
+loadArchive();
+renderItemsList();
+updatePayNumberNote();
+document.getElementById('itemCount').textContent = items.length ? (items.length + ' صنف محفوظ') : '';
+</script>
+</body>
+</html>
